@@ -10,6 +10,15 @@ public class Category {
     private String name;
     private String description;
 
+    public Category() {
+    }
+
+    public Category(int categoryId, String name, String description) {
+        this.categoryId = categoryId;
+        this.name = name;
+        this.description = description;
+    }
+
     public int getCategoryId() {
         return categoryId;
     }
@@ -31,12 +40,6 @@ public class Category {
     }
 
     public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Category(int categoryId, String name, String description) {
-        this.categoryId = categoryId;
-        this.name = name;
         this.description = description;
     }
 }

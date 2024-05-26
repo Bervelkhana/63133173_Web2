@@ -2,7 +2,6 @@ package com.example.ban_quan_ao.Controllers;
 
 import com.example.ban_quan_ao.Models.Category;
 import com.example.ban_quan_ao.Repository.CategoryRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,12 +13,12 @@ import java.util.List;
 public class CategoryController {
 
     @Autowired
-        private CategoryRepository categoryRepository;
+    private CategoryRepository categoryRepository;
 
     @GetMapping("/categories")
-    public String showCategories(Model model) {
+    public String categories(Model model) {
         List<Category> categories = categoryRepository.findAll();
-        model.addAttribute("Category", categories);
-        return "Category";
+        model.addAttribute("categories", categories);
+        return "Catagori";  
     }
 }
